@@ -1,0 +1,23 @@
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=16
+
+URxvt.perl-ext-common: resize-font
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
+!! URxvt Appearance
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: false
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
