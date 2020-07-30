@@ -9,25 +9,20 @@
 
 # Setting the background:
 # exec --no-startup-id feh --bg-scale ~/.config/wall.png
-# Starts dunst for notifications:
-exec --no-startup-id dunst
 # Composite manager:
 exec --no-startup-id compton
 # Starts dunst for notifications:
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 # mpd startup
 # exec --no-startup-id mpd
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
 
-# Steve's additions
-bindsym $mod+s exec scrot
-
 # for i3-gaps:
 hide_edge_borders both
-for_window [class="^.*"] border pixel 1
-gaps inner 15
-gaps outer 15
+for_window [class="^.*"] border pixel 0
+gaps inner 0
+gaps outer 0
 
 # i3 config file (v4)
 #
@@ -96,6 +91,8 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+p exec --no-startup-id polybar-msg cmd toggle
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -122,8 +119,8 @@ bindsym $mod+Shift+Right move right
 
 # resizing
 
-bindsym $mod+Shift+t            gaps inner current set 15; gaps outer current set 15
-bindsym $mod+t            	gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Shift+t            gaps inner current set 0; gaps outer current set 0
+bindsym $mod+t            	gaps inner current set 15; gaps outer current set 15
 
 #bindsym $mod+Shift+o            exec --no-startup-id i3resize left
 #bindsym $mod+Shift+u            exec --no-startup-id i3resize down
@@ -133,7 +130,7 @@ bindsym $mod+t            	gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+y		resize shrink width 10 px or 10 ppt
 bindsym $mod+Shift+u		resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+i		resize shrink height 10 px or 10 ppt
-bindsym $mod+shift+o		resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 
 bindsym $mod+o                  sticky toggle
 
@@ -149,7 +146,8 @@ bindsym $mod+Shift+n            floating toggle; sticky toggle; exec --no-startu
 ## quick terminal
 #bindsym $mod+c exec --no-startup-id urxvt 
 bindsym $mod+Shift+v		exec i3-sensible-terminal # [window_type="dropdown_menu]
-bindsym $mod+Shift+s        exec scrot
+#bindsym $mod+s        exec scrot
+bindsym $mod+Shift+s        exec scrot -s
 # moves to scratchpad
 bindsym $mod+Shift+minus 	move scratchpad
 bindsym $mod+c 			scratchpad show 
@@ -170,6 +168,8 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
+
+bindsym $mod+s exec screenshot 
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -296,7 +296,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Steve's additions
-# bindsym $mod+b	bar mode toggle
+#bindsym $mod+b	bar mode toggle
 
 bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
 
@@ -338,10 +338,12 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
-bar {
-	mode invisible
-	hidden_state hide
-}
+#bar {
+#    mode invisible
+#    hidden_state hide
+#    #modifier Mod1
+#}
+
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
@@ -349,6 +351,8 @@ bar {
 #exec --no-startup-id wmctrl -c Plasma
 
 #for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+# more below
 
 ## Avoid tiling popups, dropdown windows from plasma
 
@@ -363,7 +367,4 @@ bar {
 #for_window [class="Klipper"] floating enable; border none
 #for_window [class="Plasmoidviewer"] floating enable; border none
 
-#exec killall polybar
-#exec polybar example
-exec wal -R
-exec polybar example
+
