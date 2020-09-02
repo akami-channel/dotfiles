@@ -1,0 +1,87 @@
+[options]
+cursor_blink = off
+#cursor_shape = underline
+cursor_shape = block
+font = Monospace 18
+scrollback_lines = 10000
+
+[colors]
+background = rgba(0, 0, 0.3, .93)
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
+cursor = #00ff00
+#cursor_foreground = #dcdccc
+
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+#background = #3f3f3f
+
+# a = background transparency (requires a compositor)
+#background = rgba(83, 83, 83, .95)
+#background = rgba(30, 30, 30, 0.5)
+
+# If unset, will reverse foreground and background
+#highlight = #2f2f2f
+
+# Colors from color0 to color254 can be set
+# color0 = #3f3f3f
+# color1 = #705050
+# color2 = #60b48a
+# color3 = #dfaf8f
+# color4 = #506070
+# color5 = #dc8cc3
+# color6 = #8cd0d3
+# color7 = #dcdccc
+# color8 = #709080
+# color9 = #dca3a3
+# color10 = #c3bf9f
+# color11 = #f0dfaf
+# color12 = #94bff3
+# color13 = #ec93d3
+# color14 = #93e0e3
+# color15 = #ffffff
+
+# black
+#color0 =       #121221
+#color8 =       #e86fc7
+
+# red
+#color1 =       #1a1b2e
+#color9 =       #bcba5c
+
+# green
+#color2 =       #c0c0c0
+color10 =      #9400D3
+# yellow
+#color3 =       #414267
+#color11 =      #66c1cc
+
+# blue
+#color4 =       #5f608a
+#color12 =      #d28168
+
+# magenta
+#color5 =       #8485a8
+#color13 =      #e077c2
+
+# cyan
+#color6 =       #b0b0f7
+color14 =      #9400D3
+
+# white
+#color7 =       #e2e2ea
+#color15 =      #c7c8f4
+color7 =       #00dd00
+color15 =      #000000
+
+[hints]
+#foreground = #ffffff
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
